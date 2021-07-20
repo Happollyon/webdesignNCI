@@ -1,0 +1,73 @@
+
+
+body{
+	width: 100%;
+	height:100%;
+	display: flex;
+	flex-direction:column;
+	justify-content: space-around;
+	align-items: center;
+	background: #ff9a55;
+
+}
+
+#cont{
+
+	width: 50vw;
+	height:40vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items:center;	
+	
+}
+#scisor{background:#54fffb;
+	height:60%;
+	width:30%;
+	text-align:center;
+	display: flex;
+       	flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+#paper{	  cursor: pointer;
+	 background:#e7b2ff;
+	 height:60%;
+         width:30%;
+	 text-align:center;
+	display: flex;
+       	flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+	border-radius: 10px;
+}
+#rock{  background:#89ffcc;
+	height:60%;
+        width:30%;
+	text-align:center;
+	display: flex;
+       	flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+	 cursor: pointer;
+	border-radius: 10px;
+}
+
+#results{
+	background:#ffea6c;
+	height:40vh;
+        width:50vw;
+	text-align:center;
+	display: flex;
+       	flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+
+
+

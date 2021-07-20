@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<script>
+			function game(choice){
+
+			let options = ['scisor','paper','rock']
+				//generates a randon number between 0-2
+			let randon= Math.floor(Math.random() * (2 - 0 + 1)) 		
+			let computer = options[randon]
+			let result
+
+				// rules of the game
+			if(choice=="scisors" && computer=="paper" || choice=="paper" && computer=="scisor")
+				{
+					result = "scisors wins"
+				
+				}
+				
+			else if(choice=="rock" && computer=="paper" || choice=="paper" && computer=="rock" )
+				{
+					result = "paper wins"
+				}
+			else if(choice=="rock" && computer=="scisor" || choice=="scisor" && computer=="rock" )	
+			
+				{
+						result  = "rock wins"
+				}
+			else{
+				result = "Draw"
+			}
+
+				// shows the result back to the user 
+				document.getElementById('results').innerHTML = `${computer} X ${choice} = ${result}`
+
+			}
+		</script>	
+	<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id = "cont">
+			<div id = "paper" onClick="game('paper')">paper</div>	
+	
+			<div id = "scisor" onClick="game('scisor')">scisor</div>
+		
+			<div id = "rock" onClick="game('rock')">rock</div>
+		</div>	
+		<div id="results">
+		result
+		</div>
+	</body>
+</html>
+
