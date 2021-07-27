@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PUT A TITLE HERE</title>
+
+<style>
+		body{
+			background: #62275D;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			
+		}
+		#lyrics{
+			width:50vw;
+			min-height: 30vh;
+			background:#fafafa;
+			border-radius:5px;
+			display:flex;
+			flex-direction:row;
+			justify-content:center;
+			align-items:center;
+		} 
+		#button{
+			width: 13vw;
+			height:7vh;
+			background:#F38F1D;
+			color: white;
+			margin-top:5vh;
+			border-radius:9px;
+			display:flex;
+			flex-direction:row;
+			justify-content: center;
+			align-items:center;
+			cursor:pointer;
+				
+		}
+
+</style>
+
+</head>
+<body>		
+
+<script type="text/javascript">
+	function run(){
+		let lyrics=""
+		for (let i = 100; i>0; i--){	
+			
+			let text = `</br>${i} bottles of beer on the wall, ${i} bottles of beer take one down and pass it around, ${i-1} bottles of beer on the wal` 
+			lyrics = lyrics	+text
+			document.getElementById('lyrics').innerHTML=lyrics;
+			
+			if(i===1){
+
+				let text1 = "</br> No more bottles of beer on the wall, no more bottles of beer Go to the store and buy some more, 99 bottles of beer on the wall"	
+				 lyrics = lyrics +text1
+				                        document.getElementById('lyrics').innerHTML=lyrics;
+			}
+		}
+	}
+</script>
+<div id="lyrics">
+</div>
+<div id="button" onClick=run()>click me</div>
+</body>
+</html>

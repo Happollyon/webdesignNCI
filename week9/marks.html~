@@ -1,0 +1,90 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>PUT A TITLE HERE</title>
+
+<style>
+	body{
+		background:#D54177;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		color: white;
+
+	}
+	#cont,#title{
+		width: 40vw;
+		min-height:40;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		margin-bottom: 10px;
+	}
+	#button{
+		background:#71C560;
+		height: 7vh;
+		width:10vw;
+		border-radius:10px;
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+		align-items:center;
+		cursor:pointer;
+	}
+	#button2{
+		background:#F2DE68;
+		height: 7vh;
+		width:10vw;
+		border-radius:10px;
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+		align-items:center;
+		cursor:pointer;
+	}
+	#inp{	margin-bottom: 10px;
+		color:#5094CF;
+		background:white;
+		border-radius:6px;
+		border:none;
+	}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	function run(){
+		let numb = document.getElementById("inp").value
+		let html = ""
+		let inp = "<input type='text' id='inp' placeholder='grade'>"
+		for(let i=0; i<numb;i++){
+		html = html+inp
+			
+		}
+		document.getElementById('title').innerHTML = html;
+		let bttn = "<div id='button2' onClick=calculate()>CALCULATE</div>"
+		document.getElementById('cont').innerHTML = bttn;
+	}
+	function calculate(){
+		var inputs = document.querySelectorAll('input');    
+		let marks = ""
+
+		for (var i = 0; i < inputs.length; i++) {
+			marks = marks+`</br> module ${i}: ` + inputs[i].value;
+		}
+
+		document.getElementById('title').innerHTML = marks;
+		
+	}
+</script>
+
+<div id="title">
+enter how many modules you have and your grades.	
+</br> <input type="text" id="inp" placeholder="how many modules?">
+</div >
+<div id="cont">
+<div id="button" onClick=run()>START</div>
+</div>
+</body>
+</html>
+
