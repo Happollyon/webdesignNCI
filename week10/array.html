@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML 5 Boilerplate</title>
+
+<style>
+	body{	width:100vw;
+		height:100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		background:#282a36;
+	}
+	#inst{
+		color:#f8f8f2;
+		font-weight:bold;
+	}
+	#result,#container{
+		height:20vh;
+		width:30vw;
+		color:#f8f8f2;
+		border:#ff79c6;
+		border-radius:10px;
+		border-style: dotted;
+		border-width: thick;
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items:center;
+	}
+</style>
+
+<script>
+	function run(){
+	// creates an array containing 15 integers
+		var arr =[];
+		for (let i =0;i<15; i++){
+			let rand =  Math.floor(Math.random() * 100);
+			 arr.push(rand)
+		}
+		document.getElementById('container').innerHTML= `Array:</br> [${arr}]`
+		var sum=0;
+		for (let i=0; i<15; i++)
+		{
+		 	sum = sum + arr[i]; 
+		}
+		document.getElementById('result').innerHTML=`SUM: ${sum}</br> MEAN: ${sum/15}`
+	}
+</script>
+</head>
+
+<body onload="run()">
+	<div id="inst"> upon loading, a function is called.This function generates an array containing 15 random integers ranging beween 0-99.</br>
+			The script, then, returns the sum and mean to the user. 
+	</div>
+	<div id="container"></div>
+	<div id="result"></div>
+	<body>
+
+</html>
